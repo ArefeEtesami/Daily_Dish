@@ -1,5 +1,6 @@
 body {
   font-family: Comfortea;
+  --A1: #fb5d1a;
 }
 
 @font-face {
@@ -36,4 +37,45 @@ a {
 .notification-button {
   color: #000;
   margin: 0 1rem;
+}
+
+#header-mobile {
+  display: none !important;
+}
+
+.menu-drawer {
+  display: none;
+  cursor: pointer;
+}
+#header-mobile {
+  display: none !important;
+  top: 0px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 100%;
+  left: -250px;
+  width: 250px;
+  transition: left 0.3s ease;
+}
+#header-mobile.open {
+  left: 0;
+}
+@media (max-width: 600px) {
+  #header-mobile {
+    display: block !important;
+  }
+  #header-desktop {
+    display: none !important;
+  }
+  .menu-drawer {
+    display: block;
+  }
+  .menu-item {
+    display: block;
+    border-top: 1px solid #ccc;
+  }
+  #header-mobile div {
+    margin-bottom: 40px;
+  }
 }
