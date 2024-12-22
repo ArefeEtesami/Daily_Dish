@@ -1,6 +1,7 @@
 body {
   font-family: Comfortea;
   --A1: #fb5d1a;
+  --Gray: #bdbdbd;
 }
 
 @font-face {
@@ -8,6 +9,7 @@ body {
   src: url(../fonts/Comfortaa-Light.ttf);
 }
 
+/* header styles */
 .logo-title h4 {
   margin: 0 1rem;
   font-weight: bold;
@@ -20,7 +22,7 @@ body {
 
 .devider {
   height: 2rem;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--Gray);
 }
 
 a {
@@ -51,7 +53,7 @@ a {
   display: none !important;
   top: 0px;
   background: white;
-  border: 1px solid #ccc;
+  border: 1px solid var(--Gray);
   padding: 20px;
   height: 100%;
   left: -250px;
@@ -73,9 +75,45 @@ a {
   }
   .menu-item {
     display: block;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--Gray);
   }
   #header-mobile div {
     margin-bottom: 40px;
+  }
+}
+/* header styles */
+
+/* body styles */
+.food-counter-grid {
+  color: var(--Gray);
+  font-size: 10px;
+  margin: 3px;
+}
+
+.food-name-grid {
+  font-size: 15px;
+}
+
+.food-grid {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none !important;
+}
+
+@media(max-width:991px){
+  .food-name-grid{
+    font-size: 8px;
+  }
+}
+
+@media(max-width:767px){
+  .food-name-grid{
+    font-size: 30px;
+  }
+  .food-counter-grid{
+    font-size: 30px;
+  }
+  .food-grid-icon{
+    width: 25px;
   }
 }
