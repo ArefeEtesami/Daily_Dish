@@ -30,8 +30,8 @@
           <h4>Daily Dish</h4>
         </a>
       </div>
-      <a href="#" class="menu-item">Explore</a>
-      <a href="#" class="menu-item active-menu-item-mobile">Home</a>
+      <a href="/pages/explore.html" class="menu-item active-menu-item-mobile">Explore</a>
+      <a href="/pages/home.html" class="menu-item ">Home</a>
       <a href="#" class="menu-item">Profile</a>
     </div>
     <div id="header-desktop" class="d-flex align-items-center">
@@ -43,8 +43,8 @@
       </a>
       <span class="devider"></span>
       <div class="m-1">
-        <a href="#" class="menu-item">Explore</a>
-        <a href="#" class="menu-item active-menu-item-desktop">Home</a>
+        <a href="/pages/explore.html" class="menu-item active-menu-item-desktop">Explore</a>
+        <a href="/pages/home.html" class="menu-item ">Home</a>
         <a href="#" class="menu-item">Profile</a>
       </div>
     </div>
@@ -70,8 +70,26 @@
     <!-- the end header of pages -->
 
     <div class="container">
+      <div class="search-bar mt-3">
+        <div class="search-label">
+          <img width="20px" src="/media/icons/search.svg" />
+          <span>Search here ...</span>
+        </div>
+        <input class="search-input" />
+      </div>
+      <div class="row border-bottom">
+        <span class="category-span selected-category-span">Recommendation</span>
+        <span class="category-span deselected-category-span">Breakfast</span>
+        <span class="category-span deselected-category-span">Lunch</span>
+        <span class="category-span deselected-category-span">Dinner</span>
+        <span class="category-span deselected-category-span">Dessert</span>
+        <span class="category-span deselected-category-span">Snacks</span>
+        <span class="category-span deselected-category-span">Fast Food</span>
+      </div>
       <!-- grid foods 5 item on 1 line in desktop -->
-      <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
+      <h5 class="label-explore-grid-items">most popular</h5>
+     
+      <div class="row row-cols-1 row-cols-md-5 g-3 m-4 border-bottom pb-3">
         <div class="col">
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food1.jfif" />
@@ -192,6 +210,7 @@
           </a>
         </div>
       </div>
+      <h5 class="label-explore-grid-items">most recent</h5>
       <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
         <div class="col">
           <a href="#" class="food-grid">

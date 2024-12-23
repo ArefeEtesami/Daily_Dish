@@ -2,6 +2,7 @@ body {
   font-family: Comfortea;
   --A1: #fb5d1a;
   --Gray: #bdbdbd;
+  --Smoke:#F0F0F0;
 }
 
 @font-face {
@@ -58,6 +59,7 @@ a {
   height: 100%;
   left: -250px;
   width: 250px;
+  z-index: 1;
   transition: left 0.3s ease;
 }
 #header-mobile.open {
@@ -89,13 +91,14 @@ a {
   padding: 20px 40px;
   margin: 0 40px;
   top: 15px;
-  background-color: #f0f0f0;
+  background-color: var(--Smoke);
   border-radius: 5px;
   box-shadow: 2px 4px 5px 2px #34343475;
   text-align: center;
   opacity: 0;
   transform: rotate(-90deg);
   transition: opacity 0.3s, transform 0.3s ease-in-out;
+  z-index: 1;
 }
 
 #profile-popup.show {
@@ -121,6 +124,19 @@ a {
 
 .active-menu-item-mobile {
   background-color: var(--Gray);
+}
+
+.signup-header{
+  text-align: left;
+  margin: 7rem 10rem 0;
+}
+
+.signup-header h1{
+  font-weight: bold;
+}
+
+.signup-header h4{
+  color: var(--Gray);
 }
 
 /* header styles */
@@ -228,4 +244,35 @@ a {
 .label-explore-grid-items{
   margin: 15px 30px 5px !important;
   color:var(--Gray)
+}
+
+.signup-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-form img{
+  width: 300px;
+  height: 300px;
+}
+
+.signup-form input{
+padding: 10px 20px;
+background-color: var(--Smoke);
+border:none;
+margin: 10px;
+width: 150%;
+border-radius: 5px;
+}
+
+.submit-btn{
+  background-color: var(--A1);
+  color: #fff;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none !important;
+  text-align: center;
+  width: max-content;
 }

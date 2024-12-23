@@ -33,18 +33,17 @@ document.addEventListener("click", function (event) {
 // hide and show the search label 
 const searchInput = document.querySelector('.search-input');
 const searchLabel = document.querySelector('.search-label');
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
     if (searchInput.value.trim() !== '') {
         searchLabel.style.display = 'none';
     } else {
-        searchLabel.style.display = 'flex'; 
+        searchLabel.style.display = 'flex';
     }
 });
 
 // select and deselect category spans
 document.addEventListener('DOMContentLoaded', () => {
     const spans = document.querySelectorAll('.category-span');
-
     spans.forEach(span => {
         span.addEventListener('click', () => {
             spans.forEach(s => {
