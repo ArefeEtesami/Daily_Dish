@@ -81,6 +81,39 @@ a {
     margin-bottom: 40px;
   }
 }
+
+#profile-popup{
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 20px 40px;
+  margin: 0 40px;
+  top:15px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px 2px #34343475;
+  text-align: center;
+  opacity: 0;
+  transform: rotate(-90deg); 
+  transition: opacity 0.3s, transform 0.3s ease-in-out;
+}
+
+#profile-popup.show {
+  display: block;
+  opacity: 1;
+  transform: rotate(0deg); 
+}
+
+#profile-popup img{
+  width:75px;
+  height: 75px;
+  border-radius: 100%;
+}
+
+#profile-popup a , #profile-popup h5{
+  margin:1rem;
+}
+
 /* header styles */
 
 /* body styles */
