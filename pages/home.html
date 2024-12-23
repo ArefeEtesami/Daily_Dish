@@ -30,7 +30,9 @@
             <h4>Daily Dish</h4>
           </a>
         </div>
-        <a href="#" class="menu-item active-menu-item-mobile">Explore</a>
+        <a href="#" class="menu-item">Explore</a>
+        <a href="#" class="menu-item active-menu-item-mobile">Home</a>
+        <a href="#" class="menu-item">Profile</a>
       </div>
       <div id="header-desktop" class="d-flex align-items-center">
         <a href="/">
@@ -41,7 +43,9 @@
         </a>
         <span class="devider"></span>
         <div class="m-1">
-          <a href="#" class="menu-item active-menu-item-desktop">Explore</a>
+          <a href="#" class="menu-item">Explore</a>
+          <a href="#" class="menu-item active-menu-item-desktop">Home</a>
+          <a href="#" class="menu-item">Profile</a>
         </div>
       </div>
       <div class="d-flex align-items-center">
@@ -66,39 +70,19 @@
     <!-- the end header of pages -->
 
     <div class="container">
-      <div class="text-center m-5">
-        <h2 class="fw-bold">Explore Our Foodie Paradise!</h2>
-        <p class="mb-5">
-          Browse through unlimited food; Discover the best restaurants and Order
-          whatever you need for your cooking. Mouthwatering dishes await!
-        </p>
-        <a class="subscribe-button">subscribe</a>
-        <p class="mt-5">join us to share your own cooking.</p>
-      </div>
-      <div class="search-bar">
-        <div class="search-label">
-          <img width="20px" src="/media/icons/search.svg" />
-          <span>Search here ...</span>
-        </div>
-        <input class="search-input" />
-      </div>
-      <div class="row border-bottom">
-        <span class="category-span selected-category-span">Recommendation</span>
-        <span class="category-span deselected-category-span">Breakfast</span>
-        <span class="category-span deselected-category-span">Lunch</span>
-        <span class="category-span deselected-category-span">Dinner</span>
-        <span class="category-span deselected-category-span">Dessert</span>
-        <span class="category-span deselected-category-span">Snacks</span>
-        <span class="category-span deselected-category-span">Fast Food</span>
-      </div>
       <!-- grid foods 5 item on 1 line in desktop -->
-      <h5 class="label-explore-grid-items">most popular</h5>
-      <div class="row row-cols-1 row-cols-md-5 g-3 m-4 mt-0 border-bottom pb-3">
+      <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
         <div class="col">
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food1.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -123,7 +107,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food2.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -148,7 +138,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food3.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -173,7 +169,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food4.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -198,7 +200,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food5.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -219,13 +227,18 @@
           </a>
         </div>
       </div>
-      <h5 class="label-explore-grid-items">most recent</h5>
       <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
         <div class="col">
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food6.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -250,7 +263,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food7.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -275,7 +294,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food8.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -300,7 +325,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food9.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
@@ -325,7 +356,13 @@
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food10.jfif" />
             <div class="d-flex align-items-center justify-content-between">
-              <span class="food-name-grid">food name</span>
+              <span class="food-name-profile-grid"
+                ><img
+                  class="rounded-circle m-1"
+                  width="15px"
+                  src="/media/imgs/profile2.png"
+                />Profile name</span
+              >
               <div class="d-flex align-items-center">
                 <div class="d-flex align-items-center">
                   <img
