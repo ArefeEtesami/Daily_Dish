@@ -94,6 +94,10 @@ a {
   font-size: 15px;
 }
 
+.food-name-profile-grid{
+  font-size: 10px;
+}
+
 .food-grid {
   cursor: pointer;
   color: #000;
@@ -104,16 +108,30 @@ a {
   .food-name-grid{
     font-size: 8px;
   }
+  .food-name-profile-grid{
+    font-size: 6px;
+  }
+
+  .food-counter-grid{
+    font-size: 6px;
+  }
 }
 
 @media(max-width:767px){
   .food-name-grid{
     font-size: 30px;
   }
+
+  .food-name-profile-grid{
+    font-size:25px;
+  }
   .food-counter-grid{
     font-size: 30px;
   }
   .food-grid-icon{
     width: 25px;
+  }
+  .food-name-profile-grid img{
+    width:25px;
   }
 }
