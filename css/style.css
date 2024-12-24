@@ -118,6 +118,11 @@ a {
   margin: 1rem;
 }
 
+#profile-popup a{
+  text-decoration: none !important;
+  color:#000
+}
+
 .active-menu-item-desktop {
   border-bottom: 2px solid;
 }
@@ -131,12 +136,24 @@ a {
   margin: 7rem 10rem 0;
 }
 
+@media(max-width:1000px){
+  .signup-header{
+    margin: 7rem 0 0;
+  }
+}
+
 .signup-header h1{
   font-weight: bold;
 }
 
 .signup-header h4{
   color: var(--Gray);
+}
+
+header .subscribe-button{
+  padding: 5px 10px;
+  font-weight: normal;
+  font-size: 15px;
 }
 
 /* header styles */
@@ -214,13 +231,13 @@ a {
   border: 1px solid var(--A1);
   border-radius: 30px;
   padding: 10px;
+  padding-left: 40px;
 }
 
 .search-label{
   position: absolute;
-  top: 10px;
+  top: 13px;
   left: 10px;
-  color: var(--Gray);
 }
 
 .category-span{
@@ -252,9 +269,26 @@ a {
   align-items: center;
 }
 
+
 .signup-form img{
   width: 300px;
   height: 300px;
+}
+
+@media(max-width:600px){
+  .signup-form img{
+    width:200px;
+    height: 200px;
+    float: right;
+  }
+
+  .signup-form input{
+    width: 90% !important;
+  }
+
+  .signup-form{
+    display: block;
+  }
 }
 
 .signup-form input{
@@ -262,7 +296,7 @@ padding: 10px 20px;
 background-color: var(--Smoke);
 border:none;
 margin: 10px;
-width: 150%;
+width: 100%;
 border-radius: 5px;
 }
 
@@ -275,4 +309,6 @@ border-radius: 5px;
   text-decoration: none !important;
   text-align: center;
   width: max-content;
+  margin: 10px;
+  border:none;
 }

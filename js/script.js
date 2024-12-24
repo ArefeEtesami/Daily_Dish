@@ -8,36 +8,29 @@ function toggleMenu() {
 document.addEventListener("click", function (event) {
     const mobileHeader = document.getElementById("header-mobile");
     const menuDrawer = document.querySelector(".menu-drawer");
-    if (!menuDrawer.contains(event.target)) {
+    if (mobileHeader && menuDrawer && !menuDrawer.contains(event.target)) {
         mobileHeader.classList.remove("open");
     }
 });
 
+
 // show profile popup
-document.getElementById("profile-img").addEventListener("click", function (event) {
-    var profilePopup = document.getElementById("profile-popup");
-    profilePopup.classList.toggle("show");
-    event.stopPropagation();
-});
+var profileImg = document.getElementById("profile-img");
+if (profileImg) {
+    document.getElementById("profile-img").addEventListener("click", function (event) {
+        var profilePopup = document.getElementById("profile-popup");
+        profilePopup.classList.toggle("show");
+        event.stopPropagation();
+    });
+}
 
 // close profile popup
 document.addEventListener("click", function (event) {
-    var profilePopup = document.getElementById("profile-popup");
-    var profileImg = document.getElementById("profile-img");
-
-    if (!profilePopup.contains(event.target) && !profileImg.contains(event.target)) {
-        profilePopup.classList.remove("show");
-    }
-});
-
-// hide and show the search label 
-const searchInput = document.querySelector('.search-input');
-const searchLabel = document.querySelector('.search-label');
-searchInput.addEventListener('input', function () {
-    if (searchInput.value.trim() !== '') {
-        searchLabel.style.display = 'none';
-    } else {
-        searchLabel.style.display = 'flex';
+    if (profileImg) {
+        var profilePopup = document.getElementById("profile-popup");
+        if (!profilePopup.contains(event.target) && !profileImg.contains(event.target)) {
+            profilePopup.classList.remove("show");
+        }
     }
 });
 
