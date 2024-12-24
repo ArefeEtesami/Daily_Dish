@@ -2,7 +2,11 @@ body {
   font-family: Comfortea;
   --A1: #fb5d1a;
   --Gray: #bdbdbd;
-  --Smoke:#F0F0F0;
+  --GrayLikeSmoke:#ECECEC;
+  --Smoke: #f0f0f0;
+  --TextColor: #000;
+  --TextColor2: #fff;
+  --Shadow: #34343475;
 }
 
 @font-face {
@@ -17,7 +21,7 @@ body {
 }
 
 .logo-title {
-  color: #000;
+  color: var(--TextColor);
   text-decoration: none !important;
 }
 
@@ -33,12 +37,12 @@ a {
 .menu-item {
   font-weight: bold;
   padding: 1rem;
-  color: #000;
+  color: var(--TextColor);
   text-decoration: none !important;
 }
 
 .notification-button {
-  color: #000;
+  color: var(--TextColor);
   margin: 0 1rem;
 }
 
@@ -50,6 +54,7 @@ a {
   display: none;
   cursor: pointer;
 }
+
 #header-mobile {
   display: none !important;
   top: 0px;
@@ -62,9 +67,11 @@ a {
   z-index: 1;
   transition: left 0.3s ease;
 }
+
 #header-mobile.open {
   left: 0;
 }
+
 @media (max-width: 600px) {
   #header-mobile {
     display: block !important;
@@ -93,18 +100,13 @@ a {
   top: 15px;
   background-color: var(--Smoke);
   border-radius: 5px;
-  box-shadow: 2px 4px 5px 2px #34343475;
+  box-shadow: 2px 4px 5px 2px var(--Shadow);
   text-align: center;
-  opacity: 0;
-  transform: rotate(-90deg);
-  transition: opacity 0.3s, transform 0.3s ease-in-out;
   z-index: 1;
 }
 
 #profile-popup.show {
   display: block;
-  opacity: 1;
-  transform: rotate(0deg);
 }
 
 #profile-popup img {
@@ -118,9 +120,9 @@ a {
   margin: 1rem;
 }
 
-#profile-popup a{
+#profile-popup a {
   text-decoration: none !important;
-  color:#000
+  color: var(--TextColor);
 }
 
 .active-menu-item-desktop {
@@ -131,26 +133,26 @@ a {
   background-color: var(--Gray);
 }
 
-.signup-header{
+.signup-header {
   text-align: left;
   margin: 7rem 10rem 0;
 }
 
-@media(max-width:1000px){
-  .signup-header{
+@media (max-width: 1000px) {
+  .signup-header {
     margin: 7rem 0 0;
   }
 }
 
-.signup-header h1{
+.signup-header h1 {
   font-weight: bold;
 }
 
-.signup-header h4{
+.signup-header h4 {
   color: var(--Gray);
 }
 
-header .subscribe-button{
+header .subscribe-button {
   padding: 5px 10px;
   font-weight: normal;
   font-size: 15px;
@@ -175,7 +177,7 @@ header .subscribe-button{
 
 .food-grid {
   cursor: pointer;
-  color: #000;
+  color: var(--TextColor);
   text-decoration: none !important;
 }
 
@@ -213,7 +215,7 @@ header .subscribe-button{
 
 .subscribe-button {
   padding: 15px 50px;
-  color: #fff;
+  color: var(--TextColor2);
   background-color: var(--A1);
   border-radius: 30px;
   font-size: 25px;
@@ -234,13 +236,13 @@ header .subscribe-button{
   padding-left: 40px;
 }
 
-.search-label{
+.search-label {
   position: absolute;
   top: 13px;
   left: 10px;
 }
 
-.category-span{
+.category-span {
   border-radius: 30px;
   padding: 10px 30px;
   width: max-content;
@@ -250,59 +252,58 @@ header .subscribe-button{
 
 .selected-category-span {
   background-color: var(--A1);
-  color: #fff;
+  color: var(--TextColor2);
 }
 
 .deselected-category-span {
   background-color: var(--Gray);
-  color: #000;
+  color: var(--TextColor);
 }
 
-.label-explore-grid-items{
+.label-explore-grid-items {
   margin: 15px 30px 5px !important;
-  color:var(--Gray)
+  color: var(--Gray);
 }
 
-.signup-form{
+.signup-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-.signup-form img{
+.signup-form img {
   width: 300px;
   height: 300px;
 }
 
-@media(max-width:600px){
-  .signup-form img{
-    width:200px;
+@media (max-width: 600px) {
+  .signup-form img {
+    width: 200px;
     height: 200px;
     float: right;
   }
 
-  .signup-form input{
+  .signup-form input {
     width: 90% !important;
   }
 
-  .signup-form{
+  .signup-form {
     display: block;
   }
 }
 
-.signup-form input{
-padding: 10px 20px;
-background-color: var(--Smoke);
-border:none;
-margin: 10px;
-width: 100%;
-border-radius: 5px;
+.signup-form input {
+  padding: 10px 20px;
+  background-color: var(--Smoke);
+  border: none;
+  margin: 10px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-.submit-btn{
+.btn-primary {
   background-color: var(--A1);
-  color: #fff;
+  color: var(--TextColor2);
   padding: 10px;
   border-radius: 30px;
   cursor: pointer;
@@ -310,5 +311,78 @@ border-radius: 5px;
   text-align: center;
   width: max-content;
   margin: 10px;
-  border:none;
+  border: none;
+}
+
+.profile-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--Gray);
+  padding: 0px 50px;
+}
+
+#followers,
+#followings {
+  cursor: pointer;
+}
+
+#followers-menu {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  top: 80px;
+  background-color: var(--Smoke);
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px 2px var(--Shadow);
+  text-align: center;
+  z-index: 1;
+  display: none;
+  height: 70%;
+  overflow: auto;
+}
+
+.search-followers{
+  position: relative;
+}
+
+.search-followers input {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 40px;
+  background-color: var(--GrayLikeSmoke);
+}
+
+.user-follower{
+  align-items: center;
+  justify-content: left;
+  margin-top: 1rem;
+  color:var(--TextColor);
+  text-decoration: none !important;
+  display: flex;
+  padding-left: 50px;
+}
+
+.following-menu{
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width:500px){
+  .following-menu {
+    display: block;
+  }
+}
+
+.user-name{
+  font-size: 25px;
+}
+
+@media(max-width:700px){
+  .user-name{
+    font-size: 20px;
+  }
+  
 }

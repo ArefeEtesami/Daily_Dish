@@ -30,11 +30,11 @@
             <h4>Daily Dish</h4>
           </a>
         </div>
-        <a href="/pages/explore.html" class="menu-item active-menu-item-mobile"
-          >Explore</a
-        >
+        <a href="/pages/explore.html" class="menu-item">Explore</a>
         <a href="/pages/home.html" class="menu-item">Home</a>
-        <a href="/pages/profile.html" class="menu-item">Profile</a>
+        <a href="/pages/profile.html" class="menu-item active-menu-item-mobile"
+          >Profile</a
+        >
       </div>
       <div id="header-desktop" class="d-flex align-items-center">
         <a href="/">
@@ -45,13 +45,13 @@
         </a>
         <span class="devider"></span>
         <div class="m-1">
-          <a
-            href="/pages/explore.html"
-            class="menu-item active-menu-item-desktop"
-            >Explore</a
-          >
+          <a href="/pages/explore.html" class="menu-item">Explore</a>
           <a href="/pages/home.html" class="menu-item">Home</a>
-          <a href="/pages/profile.html" class="menu-item">Profile</a>
+          <a
+            href="/pages/profile.html"
+            class="menu-item active-menu-item-desktop"
+            >Profile</a
+          >
         </div>
       </div>
       <div class="d-flex align-items-center">
@@ -75,24 +75,34 @@
     </header>
     <!-- the end header of pages -->
 
+    <div class="profile-panel">
+      <div id="profile-popup">
+        <img src="/media/imgs/profile.png" />
+        <h5 class="fw-bold">User Name</h5>
+        <div class="d-grid">
+          <a>Account Setting</a>
+          <a>Language : English</a>
+          <a>Help</a>
+          <a href="/pages/signup.html">Sign Out</a>
+        </div>
+      </div>
+      <div class="following-menu">
+        <span class="user-name m-2">User name</span>
+        <span id="followers" class="d-block m-2">followers</span>
+        <span id="followings" class="d-block m-2">followings </span>
+        <div id="followers-menu">
+          <div id="has-follower">
+          </div>
+          <div id="no-follower">
+                No any user !
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn-primary">Share new post </a>
+    </div>
     <div class="container">
-      <div class="search-bar mt-3">
-        <img class="search-label" width="20px" src="/media/icons/search.svg" />
-        <input placeholder="Search here ..." class="search-input" />
-      </div>
-      <div class="row border-bottom">
-        <span class="category-span selected-category-span">Recommendation</span>
-        <span class="category-span deselected-category-span">Breakfast</span>
-        <span class="category-span deselected-category-span">Lunch</span>
-        <span class="category-span deselected-category-span">Dinner</span>
-        <span class="category-span deselected-category-span">Dessert</span>
-        <span class="category-span deselected-category-span">Snacks</span>
-        <span class="category-span deselected-category-span">Fast Food</span>
-      </div>
       <!-- grid foods 5 item on 1 line in desktop -->
-      <h5 class="label-explore-grid-items">most popular</h5>
-
-      <div class="row row-cols-1 row-cols-md-5 g-3 m-4 border-bottom pb-3">
+      <div class="row row-cols-1 row-cols-md-5 g-3 m-4 mt-0">
         <div class="col">
           <a href="#" class="food-grid">
             <img class="rounded w-100" src="/media/imgs/food1.jfif" />
@@ -218,7 +228,6 @@
           </a>
         </div>
       </div>
-      <h5 class="label-explore-grid-items">most recent</h5>
       <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
         <div class="col">
           <a href="#" class="food-grid">

@@ -49,3 +49,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// list of follwers on panel profile
+const followers = [
+    { image: "/media/imgs/profile2.png", name: "User One" },
+    { image: "/media/imgs/profile2.png", name: "User Two" },
+    { image: "/media/imgs/profile2.png", name: "User Three" },
+    { image: "/media/imgs/profile2.png", name: "User Four" },
+    { image: "/media/imgs/profile2.png", name: "User Five" },
+    { image: "/media/imgs/profile2.png", name: "User Six" },
+    { image: "/media/imgs/profile2.png", name: "User Seven" },
+    { image: "/media/imgs/profile2.png", name: "User Eight" },
+    { image: "/media/imgs/profile2.png", name: "User Nine" },
+    { image: "/media/imgs/profile2.png", name: "User Ten" },
+    { image: "/media/imgs/profile2.png", name: "User Eleven" },
+    { image: "/media/imgs/profile2.png", name: "User Twleve" },
+    { image: "/media/imgs/profile2.png", name: "User Therteen" },
+];
+
+function renderFollowers() {
+    const followersMenu = document.getElementById('followers-menu');
+    const hasFollower = document.getElementById('has-follower');
+    const noFollower = document.getElementById('no-follower');
+
+    hasFollower.innerHTML = `
+      <div class="search-followers">
+        <img class="search-label" width="20px" src="/media/icons/search.svg" />
+        <input placeholder="Search..." class="search-input" />
+      </div>
+    `;
+    if (followersMenu) {
+        if (followers.length === 0) {
+            noFollower.style.display = 'block';
+        } else {
+            noFollower.style.display = 'none';
+            followers.forEach(follower => {
+                const followerElement = document.createElement('a');
+                followerElement.classList.add('user-follower');
+                followerElement.href = '#';
+                followerElement.innerHTML = `
+          <img width="34px" class="rounded-circle" src="${follower.image}"/>
+          <span style="padding-left:30px">${follower.name}</span>
+        `;
+                hasFollower.appendChild(followerElement);
+            });
+        }
+    }
+}
+
+function toggleFollowersMenu() {
+    const followersMenu = document.getElementById('followers-menu');
+    const currentDisplay = followersMenu.style.display;
+    if (followersMenu) {
+        if (currentDisplay === 'none' || currentDisplay === '') {
+            followersMenu.style.display = 'block';
+            renderFollowers();
+        } else {
+            followersMenu.style.display = 'none';
+        }
+    }
+}
+
+function hideFollowersMenuOnClickOutside(event) {
+    const followersMenu = document.getElementById('followers-menu');
+    const followersButton = document.getElementById('followers');
+    const followingsButton = document.getElementById('followings');
+    if (followersMenu) {
+        if (!followersMenu.contains(event.target) &&
+            !followersButton.contains(event.target) &&
+            !followingsButton.contains(event.target)) {
+            followersMenu.style.display = 'none';
+        }
+    }
+}
+const followersSpan = document.getElementById('followers');
+const followingsSpan = document.getElementById('followings');
+if (followersSpan && followingsSpan) {
+    followersSpan.addEventListener('click', toggleFollowersMenu);
+    followingsSpan.addEventListener('click', toggleFollowersMenu);
+    document.addEventListener('click', hideFollowersMenuOnClickOutside);
+}
