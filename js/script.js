@@ -118,6 +118,7 @@ function adjustMainProfileWidth() {
     const foodGridIcon = document.querySelectorAll('.food-grid-icon');
     const foodCounterGrid = document.querySelectorAll('.food-counter-grid');
     const profilePanel = document.querySelector('.profile-panel');
+    
     if (window.innerWidth <= 750 && followersMenu.style.display === 'block') {
         mainProfileContainer.style.width = '60%';
         foodNameGrid.forEach(function (item) {
@@ -142,6 +143,7 @@ function adjustMainProfileWidth() {
         foodCounterGrid.forEach(function (item) {
             item.style.fontSize = '';
         });
+        profilePanel.style.padding = "";
     }
 
 }
