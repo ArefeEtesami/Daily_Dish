@@ -2,7 +2,7 @@ body {
   font-family: Comfortea;
   --A1: #fb5d1a;
   --Gray: #bdbdbd;
-  --GrayLikeSmoke:#ECECEC;
+  --GrayLikeSmoke: #ececec;
   --Smoke: #f0f0f0;
   --TextColor: #000;
   --TextColor2: #fff;
@@ -328,10 +328,7 @@ header .subscribe-button {
 }
 
 #followers-menu {
-  position: absolute;
-  left: 0;
   padding: 10px;
-  top: 80px;
   background-color: var(--Smoke);
   border-radius: 5px;
   box-shadow: 2px 4px 5px 2px var(--Shadow);
@@ -340,9 +337,10 @@ header .subscribe-button {
   display: none;
   height: 70%;
   overflow: auto;
+  width: max-content;
 }
 
-.search-followers{
+.search-followers {
   position: relative;
 }
 
@@ -355,34 +353,65 @@ header .subscribe-button {
   background-color: var(--GrayLikeSmoke);
 }
 
-.user-follower{
+.user-follower {
   align-items: center;
   justify-content: left;
   margin-top: 1rem;
-  color:var(--TextColor);
+  color: var(--TextColor);
   text-decoration: none !important;
   display: flex;
-  padding-left: 50px;
+  padding-left: 25px;
 }
 
-.following-menu{
+.user-follower span {
+  padding-left: 30px;
+}
+
+.following-menu {
   display: flex;
   align-items: center;
 }
 
-@media(max-width:500px){
+@media (max-width: 500px) {
   .following-menu {
     display: block;
   }
 }
 
-.user-name{
+.user-name {
   font-size: 25px;
 }
 
-@media(max-width:700px){
-  .user-name{
+@media (max-width: 700px) {
+  .user-name {
     font-size: 20px;
   }
-  
+}
+
+.main-profile-container {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 750px) {
+  .following-menu {
+    display: block;
+  }
+  .user-follower {
+    padding-left: 0;
+  }
+
+  .user-follower span {
+    padding-left: 15px;
+    font-size: 15px;
+  }
+  .user-follower img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-follower span {
+    font-size: 10px;
+  }
 }

@@ -89,7 +89,7 @@ function renderFollowers() {
                 followerElement.href = '#';
                 followerElement.innerHTML = `
           <img width="34px" class="rounded-circle" src="${follower.image}"/>
-          <span style="padding-left:30px">${follower.name}</span>
+          <span>${follower.name}</span>
         `;
                 hasFollower.appendChild(followerElement);
             });
@@ -107,7 +107,43 @@ function toggleFollowersMenu() {
         } else {
             followersMenu.style.display = 'none';
         }
+        adjustMainProfileWidth();
     }
+}
+
+function adjustMainProfileWidth() {
+    const followersMenu = document.getElementById('followers-menu');
+    const mainProfileContainer = document.querySelector('.main-profile-container');
+    const foodNameGrid = document.querySelectorAll('.food-name-grid');
+    const foodGridIcon = document.querySelectorAll('.food-grid-icon');
+    const foodCounterGrid = document.querySelectorAll('.food-counter-grid');
+    const profilePanel = document.querySelector('.profile-panel');
+    if (window.innerWidth <= 750 && followersMenu.style.display === 'block') {
+        mainProfileContainer.style.width = '60%';
+        foodNameGrid.forEach(function (item) {
+            item.style.fontSize = '15px';
+        });
+        foodGridIcon.forEach(function (item) {
+            item.style.width = '15px';
+        });
+        foodCounterGrid.forEach(function (item) {
+            item.style.fontSize = '15px';
+        });
+        profilePanel.style.padding = "0";
+    } else {
+        mainProfileContainer.style.width = '100%';
+        foodNameGrid.forEach(function (item) {
+            item.style.fontSize = '';
+        });
+
+        foodGridIcon.forEach(function (item) {
+            item.style.width = '';
+        });
+        foodCounterGrid.forEach(function (item) {
+            item.style.fontSize = '';
+        });
+    }
+
 }
 
 function hideFollowersMenuOnClickOutside(event) {
