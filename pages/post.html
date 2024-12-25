@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/media/icons/logo.png"
+    />
+    <title>Daily Dish</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="d-flex align-items-center justify-content-left m-4">
+      <img class="m-1" width="30px" src="/media/icons/left.svg" />
+      <h4 class="m-1">posts</h4>
+    </header>
+    <div class="container">
+      <div class="post-banner">
+        <div
+          id="carousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/media/imgs/foodPost.jfif"
+                class="d-block w-100 image-post"
+                alt="Image 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/media/imgs/food1.jfif"
+                class="d-block w-100 image-post"
+                alt="Image 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/media/imgs/food10.jfif"
+                class="d-block w-100 image-post"
+                alt="Image 3"
+              />
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="action-post-icons">
+          <div>
+            <span>
+              <img src="/media/icons/like.svg" />
+            </span>
+            <p>100</p>
+          </div>
+          <div>
+            <span>
+              <img src="/media/icons/dislike.svg" />
+            </span>
+            <p>100</p>
+          </div>
+          <div>
+            <span>
+              <img src="/media/icons/eye-dark.svg" />
+            </span>
+            <p>100</p>
+          </div>
+          <div>
+            <span>
+              <img src="/media/icons/comment.svg" />
+            </span>
+            <p>100</p>
+          </div>
+          <div>
+            <span>
+              <img src="/media/icons/send.svg" />
+            </span>
+          </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

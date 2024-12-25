@@ -1,3 +1,4 @@
+//#region menu drawer
 // open menu drawer
 function toggleMenu() {
     const mobileHeader = document.getElementById("header-mobile");
@@ -12,8 +13,9 @@ document.addEventListener("click", function (event) {
         mobileHeader.classList.remove("open");
     }
 });
+//#endregion
 
-
+//#region profile popup
 // show profile popup
 var profileImg = document.getElementById("profile-img");
 if (profileImg) {
@@ -33,7 +35,9 @@ document.addEventListener("click", function (event) {
         }
     }
 });
+//#endregion
 
+//#region category spans
 // select and deselect category spans
 document.addEventListener('DOMContentLoaded', () => {
     const spans = document.querySelectorAll('.category-span');
@@ -49,7 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+//#endregion
 
+//#region list of followers on panel profile
 // list of follwers on panel profile
 const followers = [
     { image: "/media/imgs/profile2.png", name: "User One" },
@@ -118,7 +124,7 @@ function adjustMainProfileWidth() {
     const foodGridIcon = document.querySelectorAll('.food-grid-icon');
     const foodCounterGrid = document.querySelectorAll('.food-counter-grid');
     const profilePanel = document.querySelector('.profile-panel');
-    
+
     if (window.innerWidth <= 750 && followersMenu.style.display === 'block') {
         mainProfileContainer.style.width = '60%';
         foodNameGrid.forEach(function (item) {
@@ -167,3 +173,43 @@ if (followersSpan && followingsSpan) {
     followingsSpan.addEventListener('click', toggleFollowersMenu);
     document.addEventListener('click', hideFollowersMenuOnClickOutside);
 }
+//#endregion
+
+//#region carousel sliding images post
+// carousel sliding images post
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const buttons = document.querySelectorAll('.carousel-indicators button');
+if (slides && buttons) {
+    function changeSlide() {
+        slides[currentSlideIndex].classList.remove('active');
+        buttons[currentSlideIndex].classList.remove('active');
+
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+        slides[currentSlideIndex].classList.add('active');
+        buttons[currentSlideIndex].classList.add('active');
+    }
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            slides[currentSlideIndex].classList.remove('active');
+            buttons[currentSlideIndex].classList.remove('active');
+
+            currentSlideIndex = index;
+
+            slides[currentSlideIndex].classList.add('active');
+            buttons[currentSlideIndex].classList.add('active');
+
+        });
+    });
+
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+        new bootstrap.Carousel(carousel, {
+            interval: false,
+            ride: false,
+        });
+    }
+}
+//#endregion
