@@ -158,11 +158,13 @@ function hideFollowersMenuOnClickOutside(event) {
     const followersMenu = document.getElementById('followers-menu');
     const followersButton = document.getElementById('followers');
     const followingsButton = document.getElementById('followings');
+    const mainProfileContainer = document.querySelector('.main-profile-container');
     if (followersMenu) {
         if (!followersMenu.contains(event.target) &&
             !followersButton.contains(event.target) &&
             !followingsButton.contains(event.target)) {
             followersMenu.style.display = 'none';
+            mainProfileContainer.style.width = '100%';
         }
     }
 }
@@ -212,4 +214,87 @@ if (slides && buttons) {
         });
     }
 }
+//#endregion
+
+//#region post toggle-arrow
+
+document.querySelectorAll('.toggle-arrow').forEach(function (arrow) {
+    arrow.addEventListener('click', function () {
+        var ul = arrow.closest('.d-flex').querySelector('ul');
+        var img = arrow.querySelector('.arrow-icon');
+        ul.classList.toggle('hidden');
+        if (ul.classList.contains('hidden')) {
+            img.src = '/media/icons/bottom-arrow.svg';
+        } else {
+            img.src = '/media/icons/top-arrow.svg';
+        }
+    });
+});
+
+//#endregion
+
+//#region post like , dislike reaction
+const like = document.querySelector('.like');
+if (like) {
+    like.addEventListener('click', function () {
+        var img = this.querySelector('img');
+        var count = this.nextElementSibling;
+
+        var dislikeImg = document.querySelector('.dislike img');
+        var dislikeCount = document.querySelector('.dislike-count');
+        if (dislikeImg.src.includes('dislike-fill.svg')) {
+            dislikeImg.src = '/media/icons/dislike.svg';
+            dislikeCount.textContent = parseInt(dislikeCount.textContent) - 1;
+        }
+
+        if (img.src.includes('like.svg')) {
+            img.src = '/media/icons/like-fill.svg';
+            count.textContent = parseInt(count.textContent) + 1;
+        } else {
+            img.src = '/media/icons/like.svg';
+            count.textContent = parseInt(count.textContent) - 1;
+        }
+    });
+
+    document.querySelector('.dislike').addEventListener('click', function () {
+        var img = this.querySelector('img');
+        var count = this.nextElementSibling;
+
+        var likeImg = document.querySelector('.like img');
+        var likeCount = document.querySelector('.like-count');
+        if (likeImg.src.includes('like-fill.svg')) {
+            likeImg.src = '/media/icons/like.svg';
+            likeCount.textContent = parseInt(likeCount.textContent) - 1;
+        }
+
+        if (img.src.includes('dislike.svg')) {
+            img.src = '/media/icons/dislike-fill.svg';
+            count.textContent = parseInt(count.textContent) + 1;
+        } else {
+            img.src = '/media/icons/dislike.svg';
+            count.textContent = parseInt(count.textContent) - 1;
+        }
+    });
+}
+//#endregion
+
+//#region copy-link
+const copyLink = document.querySelector('#copy-link');
+if (copyLink) {
+    copyLink.addEventListener('click', function () {
+        var currentUrl = window.location.href;
+
+        var tempInput = document.createElement('input');
+        document.body.appendChild(tempInput);
+        tempInput.value = currentUrl;
+        tempInput.select();
+
+        document.execCommand('copy');
+
+        document.body.removeChild(tempInput);
+
+        alert('Link copied to clipboard: ' + currentUrl);
+    });
+}
+
 //#endregion

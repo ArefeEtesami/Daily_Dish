@@ -9,6 +9,10 @@ body {
   --Shadow: #34343475;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: Comfortea;
   src: url(../fonts/Comfortaa-Light.ttf);
@@ -156,6 +160,15 @@ header .subscribe-button {
   padding: 5px 10px;
   font-weight: normal;
   font-size: 15px;
+}
+
+.post-header{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin:2rem;
+  text-decoration: none !important;
+  color:var(--TextColor)
 }
 
 /* header styles */
@@ -453,6 +466,7 @@ header .subscribe-button {
 .carousel-indicators{
   position: static;
   align-items: center;
+  margin-right: 0;
 }
 
 .carousel-inner {
@@ -472,4 +486,76 @@ header .subscribe-button {
 .carousel-indicators .active {
   width: 10px !important;
   height: 10px !important;
+}
+
+.post-single-comment{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.input-comment{
+  background-color: var(--Gray);
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  margin:10px 0;
+  border-radius: 5px;
+}
+
+#caption-post{
+  margin:2rem 0
+}
+
+.about-post-title h5{
+  margin:0 10px 10px;
+  color:var(--A1);
+  font-weight: bold;
+}
+
+.about-post-title li{
+  margin:10px 0;
+}
+
+#Recipe ul {
+  list-style-type: none; 
+  padding-left: 0;
+}
+
+#Recipe li {
+  counter-increment: list-item; 
+  position: relative;
+  padding-left: 30px; 
+}
+
+#Recipe li::before {
+  content: counter(list-item); 
+  position: absolute;
+  left: 0; 
+  top: 0;
+  font-weight: bold; 
+  font-size: 16px; 
+}
+
+ul {
+  display: block; 
+}
+
+ul.hidden {
+  display: none; 
+}
+
+.toggle-arrow{
+  cursor: pointer;
+}
+
+.date-time-post{
+  color:var(--Gray)
+}
+
+@media(max-width:350px){
+  .date-time-post{
+    font-size: 12px;
+  }
 }

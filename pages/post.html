@@ -12,17 +12,19 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header class="d-flex align-items-center justify-content-left m-4">
-      <img class="m-1" width="30px" src="/media/icons/left.svg" />
-      <h4 class="m-1">posts</h4>
+    <header>
+      <a
+        class="post-header"
+        href="javascript:void(0);"
+        onclick="window.history.back();"
+      >
+        <img class="m-1" width="30px" src="/media/icons/left.svg" />
+        <h4 class="m-1">posts</h4>
+      </a>
     </header>
     <div class="container">
       <div class="post-banner">
-        <div
-          id="carousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -46,38 +48,39 @@
               />
             </div>
           </div>
-        
         </div>
-
-        <div class="action-post-icons">
-          <div>
-            <span>
-              <img src="/media/icons/like.svg" />
-            </span>
-            <p>100</p>
-          </div>
-          <div>
-            <span>
-              <img src="/media/icons/dislike.svg" />
-            </span>
-            <p>100</p>
-          </div>
-          <div>
-            <span>
-              <img src="/media/icons/eye-dark.svg" />
-            </span>
-            <p>100</p>
-          </div>
-          <div>
-            <span>
-              <img src="/media/icons/comment.svg" />
-            </span>
-            <p>100</p>
-          </div>
-          <div>
-            <span>
-              <img src="/media/icons/send.svg" />
-            </span>
+        <div
+          class="d-flex align-items-center justify-content-between border-bottom"
+        >
+          <div class="action-post-icons">
+            <div class="reaction">
+              <span class="like">
+                <img src="/media/icons/like.svg" alt="Like" />
+              </span>
+              <p class="like-count">100</p>
+            </div>
+            <div class="reaction">
+              <span class="dislike">
+                <img src="/media/icons/dislike.svg" alt="Dislike" />
+              </span>
+              <p class="dislike-count">100</p>
+            </div>
+            <div>
+              <span>
+                <img src="/media/icons/eye-dark.svg" />
+              </span>
+              <p>100</p>
+            </div>
+            <div>
+              <a href="#comments-section">
+                <img src="/media/icons/comment.svg" />
+              </a>
+            </div>
+            <div>
+              <span id="copy-link">
+                <img src="/media/icons/send.svg" />
+              </span>
+            </div>
           </div>
           <div class="carousel-indicators">
             <button
@@ -100,6 +103,77 @@
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
+          </div>
+        </div>
+        <div class="border-bottom">
+          <p id="caption-post">
+            Caption : Here’s some information about the food. could be one or
+            two of its main ingredients, Its taste, your own opinion about it or
+            whatever that might make people want to try it.
+          </p>
+          <div id="comments-section">
+            <div class="post-single-comment">
+              <div class="d-flex align-items-start">
+                <img
+                  class="m-1 rounded-circle"
+                  width="20px"
+                  src="/media/imgs/profile2.png"
+                /><span>Here’s this persons opinion of the post</span>
+              </div>
+              <div class="date-time-post">2024-10-11 , 14:14</div>
+            </div>
+            <div class="post-single-comment">
+              <div class="d-flex align-items-start">
+                <img
+                  class="m-1 rounded-circle"
+                  width="20px"
+                  src="/media/imgs/profile2.png"
+                /><span>Here’s this persons opinion of the post</span>
+              </div>
+              <div class="date-time-post">2024-12-01 , 15:02</div>
+            </div>
+            <input class="input-comment" placeholder="Leave a comment..." />
+          </div>
+          <div
+            id="Ingredients"
+            class="d-flex align-items-start pt-3 border-top"
+          >
+            <span class="toggle-arrow">
+              <img
+                class="arrow-icon"
+                width="20px"
+                src="/media/icons/top-arrow.svg"
+              />
+            </span>
+            <div class="about-post-title">
+              <h5>Ingredients</h5>
+              <ul class="ingredients-list">
+                <li>Ingredient 1</li>
+                <li>Ingredient 2</li>
+                <li>Ingredient 3</li>
+                <li>Ingredient 4</li>
+                <li>Ingredient 5</li>
+              </ul>
+            </div>
+          </div>
+          <div id="Recipe" class="d-flex align-items-start pt-3 border-top">
+            <span class="toggle-arrow">
+              <img
+                class="arrow-icon"
+                width="20px"
+                src="/media/icons/top-arrow.svg"
+              />
+            </span>
+            <div class="about-post-title">
+              <h5>Recipe</h5>
+              <ul class="recipe-list">
+                <li>First thing to do</li>
+                <li>Second thing to do</li>
+                <li>Third thing to do</li>
+                <li>Fourth thing to do</li>
+                <li>Fifth thing to do</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
