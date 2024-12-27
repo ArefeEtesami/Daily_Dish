@@ -430,7 +430,7 @@ header .subscribe-button {
 }
 
 .image-post{
-  width:100%;
+  width:90% !important;
   height: 400px;
   border-radius: 5px;
 }
@@ -558,4 +558,19 @@ ul.hidden {
   .date-time-post{
     font-size: 12px;
   }
+}
+
+.food-grid img{
+  height: 90%;
+}
+
+.carousel-item{
+  justify-items: center;
+}
+
+.action-poost-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:0 5%;
 }

@@ -64,7 +64,7 @@
       </div>
       <div id="profile-popup">
         <img src="/media/imgs/profile.png" />
-        <h5 class="fw-bold">User Name</h5>
+        <h5 id="userName" class="fw-bold">User Name</h5>
         <div class="d-grid">
           <a>Account Setting</a>
           <a>Language : English</a>
@@ -82,7 +82,7 @@
       <div class="main-profile-container">
         <div class="profile-panel">
           <div class="following-menu">
-            <span class="user-name m-2">User name</span>
+            <span id="userNamePanel" class="user-name m-2">User name</span>
             <span id="followers" class="d-block m-2">followers</span>
             <span id="followings" class="d-block m-2">followings </span>
           </div>
@@ -91,6 +91,106 @@
         <div class="container">
           <!-- grid foods 5 item on 1 line in desktop -->
           <div class="row row-cols-1 row-cols-md-5 g-3 m-4 mt-0">
+            <div class="col">
+              <a href="/pages/post.html" class="food-grid">
+                <img class="rounded w-100" src="/media/imgs/food31.jfif" />
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="food-name-grid">food name</span>
+                  <div id="count-detail-post-grid" class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="10px"
+                        src="/media/icons/heart-gray.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="12px"
+                        src="/media/icons/eye.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="/pages/post.html" class="food-grid">
+                <img class="rounded w-100" src="/media/imgs/food32.jfif" />
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="food-name-grid">food name</span>
+                  <div id="count-detail-post-grid" class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="10px"
+                        src="/media/icons/heart-gray.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="12px"
+                        src="/media/icons/eye.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="/pages/post.html" class="food-grid">
+                <img class="rounded w-100" src="/media/imgs/food33.jfif" />
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="food-name-grid">food name</span>
+                  <div id="count-detail-post-grid" class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="10px"
+                        src="/media/icons/heart-gray.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="12px"
+                        src="/media/icons/eye.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="/pages/post.html" class="food-grid">
+                <img class="rounded w-100" src="/media/imgs/food34.jfif" />
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="food-name-grid">food name</span>
+                  <div id="count-detail-post-grid" class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="10px"
+                        src="/media/icons/heart-gray.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="food-grid-icon"
+                        width="12px"
+                        src="/media/icons/eye.svg"
+                      /><span class="food-counter-grid">100</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
             <div class="col">
               <a href="/pages/post.html" class="food-grid">
                 <img class="rounded w-100" src="/media/imgs/food1.jfif" />
@@ -115,7 +215,8 @@
                 </div>
               </a>
             </div>
-
+          </div>
+          <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
             <div class="col">
               <a href="/pages/post.html" class="food-grid">
                 <img class="rounded w-100" src="/media/imgs/food2.jfif" />
@@ -215,111 +316,10 @@
                 </div>
               </a>
             </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-5 g-3 m-4">
+
             <div class="col">
               <a href="/pages/post.html" class="food-grid">
                 <img class="rounded w-100" src="/media/imgs/food6.jfif" />
-                <div class="d-flex align-items-center justify-content-between">
-                  <span class="food-name-grid">food name</span>
-                  <div id="count-detail-post-grid" class="d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="10px"
-                        src="/media/icons/heart-gray.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="12px"
-                        src="/media/icons/eye.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="/pages/post.html" class="food-grid">
-                <img class="rounded w-100" src="/media/imgs/food7.jfif" />
-                <div class="d-flex align-items-center justify-content-between">
-                  <span class="food-name-grid">food name</span>
-                  <div id="count-detail-post-grid" class="d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="10px"
-                        src="/media/icons/heart-gray.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="12px"
-                        src="/media/icons/eye.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="/pages/post.html" class="food-grid">
-                <img class="rounded w-100" src="/media/imgs/food8.jfif" />
-                <div class="d-flex align-items-center justify-content-between">
-                  <span class="food-name-grid">food name</span>
-                  <div id="count-detail-post-grid" class="d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="10px"
-                        src="/media/icons/heart-gray.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="12px"
-                        src="/media/icons/eye.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="/pages/post.html" class="food-grid">
-                <img class="rounded w-100" src="/media/imgs/food9.jfif" />
-                <div class="d-flex align-items-center justify-content-between">
-                  <span class="food-name-grid">food name</span>
-                  <div id="count-detail-post-grid" class="d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="10px"
-                        src="/media/icons/heart-gray.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="food-grid-icon"
-                        width="12px"
-                        src="/media/icons/eye.svg"
-                      /><span class="food-counter-grid">100</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col">
-              <a href="/pages/post.html" class="food-grid">
-                <img class="rounded w-100" src="/media/imgs/food10.jfif" />
                 <div class="d-flex align-items-center justify-content-between">
                   <span class="food-name-grid">food name</span>
                   <div id="count-detail-post-grid" class="d-flex align-items-center">

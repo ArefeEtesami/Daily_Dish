@@ -18,31 +18,16 @@
         <h4>where Every Bite Tells a Story</h4>
       </div>
       <div class="signup-form">
-          <form id="signupForm">
-            <input id="name" required placeholder="Name..." />
-            <input
-              id="emailOrPhone"
-              required
-              placeholder="Email, Phone number..."
-            />
-            <button type="submit" class="btn-primary">Sign Up</button>
-          </form>
-          <script>
-            document
-              .getElementById("signupForm")
-              .addEventListener("submit", function (event) {
-                event.preventDefault();
-                const name = document.getElementById("name").value;
-                const emailOrPhone =
-                  document.getElementById("emailOrPhone").value;
-                if (name && emailOrPhone) {
-                  window.location.href = "/pages/home.html";
-                } else {
-                  alert("Please fill out both fields.");
-                }
-              });
-          </script>
-          <img src="/media/imgs/Cook.png" />
+        <form id="signupForm">
+          <input id="name" required placeholder="Name..." />
+          <input
+            id="emailOrPhone"
+            required
+            placeholder="Email, Phone number..."
+          />
+          <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+        <img src="/media/imgs/Cook.png" />
       </div>
     </div>
 

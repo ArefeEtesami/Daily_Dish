@@ -298,3 +298,44 @@ if (copyLink) {
 }
 
 //#endregion
+
+//#region get localstrorage user-name
+
+const signupForm = document
+    .getElementById("signupForm");
+if (signupForm) {
+    document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const emailOrPhone =
+                document.getElementById("emailOrPhone").value;
+            if (name && emailOrPhone) {
+                window.location.href = "/pages/home.html";
+            } else {
+                alert("Please fill out both fields.");
+            }
+        });
+
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+
+        localStorage.setItem('userName', name);
+
+        window.location.href = '/pages/profile.html';
+    });
+}
+
+var userName = localStorage.getItem('userName');
+var userNameElement = document.getElementById('userName');
+var userNamePanel = document.getElementById('userNamePanel');
+if (userNameElement && userName) {
+    userNameElement.textContent = userName;
+    if (userNamePanel) {
+        userNamePanel.textContent = userName;
+    }
+}
+
+//#endregion
